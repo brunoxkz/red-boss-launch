@@ -12,7 +12,7 @@ export const Benefits = () => {
     {
       icon: Trophy,
       title: "Maiores Comissões",
-      description: "Até 80% de comissão nos melhores produtos do mercado"
+      description: "Até 70% de comissão + ganhos recorrentes nos melhores produtos"
     },
     {
       icon: Rocket,
@@ -22,7 +22,7 @@ export const Benefits = () => {
     {
       icon: Shield,
       title: "Suporte VIP",
-      description: "Atendimento prioritário e mentoria para afiliados"
+      description: "Atendimento prioritário e mentoria 1:1 personalizada"
     },
     {
       icon: Zap,
@@ -33,55 +33,6 @@ export const Benefits = () => {
       icon: Flame,
       title: "Treinamentos Exclusivos",
       description: "Lives e cursos exclusivos para membros do clube"
-    }
-  ];
-
-  const plans = [
-    {
-      name: "Iniciante",
-      price: "GRÁTIS",
-      period: "",
-      description: "Perfeito para começar",
-      features: [
-        "Acesso a produtos básicos",
-        "Comissões até 30%",
-        "Suporte via email",
-        "Materiais básicos"
-      ],
-      cta: "Começar Grátis",
-      popular: false
-    },
-    {
-      name: "VIP Boss",
-      price: "R$ 97",
-      period: "/mês",
-      description: "Para afiliados sérios",
-      features: [
-        "Acesso a TODOS os produtos",
-        "Comissões até 80%",
-        "Suporte prioritário 24/7",
-        "Materiais premium",
-        "Treinamentos exclusivos",
-        "Mentoria em grupo"
-      ],
-      cta: "Ser VIP Agora",
-      popular: true
-    },
-    {
-      name: "Elite Boss",
-      price: "R$ 297",
-      period: "/mês",
-      description: "Máximo nível",
-      features: [
-        "Tudo do VIP Boss",
-        "Produtos em pré-lançamento",
-        "Comissões especiais",
-        "Mentoria 1:1",
-        "Eventos exclusivos",
-        "Suporte WhatsApp direto"
-      ],
-      cta: "Elite Access",
-      popular: false
     }
   ];
 
@@ -117,56 +68,54 @@ export const Benefits = () => {
           ))}
         </div>
 
-        {/* Pricing Section */}
+        {/* Contact Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Escolha Seu <span className="text-gradient-primary">Plano</span>
+            Solicite Seu <span className="text-gradient-primary">Acesso</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comece grátis ou acelere seus resultados com nossos planos VIP.
+            Entre em contato conosco para solicitar seu acesso ao clube exclusivo.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`card-premium relative ${plan.popular ? 'border-primary shadow-[var(--shadow-glow)] scale-105' : ''}`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-gradient-to-r from-primary to-primary-glow px-4 py-1">
-                    <Crown className="w-4 h-4 mr-1" />
-                    MAIS POPULAR
-                  </Badge>
-                </div>
-              )}
-              
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <div className="mb-2">
-                  <span className="text-4xl font-black text-primary">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.period}</span>
-                </div>
-                <p className="text-muted-foreground">{plan.description}</p>
+        <div className="max-w-2xl mx-auto">
+          <div className="card-premium text-center">
+            <div className="mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary-glow rounded-full flex items-center justify-center mx-auto mb-4">
+                <Crown className="w-8 h-8 text-primary-foreground" />
               </div>
-
-              <div className="space-y-3 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <Button 
-                className={`w-full ${plan.popular ? 'btn-hero' : 'btn-secondary'}`}
-              >
-                {plan.cta}
-              </Button>
+              <h3 className="text-2xl font-bold mb-4">Acesso Exclusivo + Mentoria 1:1</h3>
+              <p className="text-muted-foreground mb-6">
+                Faça parte do seleto grupo de afiliados elite e receba mentoria personalizada para maximizar seus resultados.
+              </p>
             </div>
-          ))}
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-3 justify-center">
+                <Check className="w-5 h-5 text-primary" />
+                <span>Acesso a todos os produtos premium</span>
+              </div>
+              <div className="flex items-center gap-3 justify-center">
+                <Check className="w-5 h-5 text-primary" />
+                <span>Comissões até 70% + recorrências</span>
+              </div>
+              <div className="flex items-center gap-3 justify-center">
+                <Check className="w-5 h-5 text-primary" />
+                <span>Mentoria 1:1 personalizada</span>
+              </div>
+              <div className="flex items-center gap-3 justify-center">
+                <Check className="w-5 h-5 text-primary" />
+                <span>Estratégias ocultas de conversão</span>
+              </div>
+            </div>
+
+            <Button className="btn-hero w-full mb-4">
+              Solicitar Acesso via WhatsApp
+            </Button>
+            <p className="text-sm text-muted-foreground">
+              Responda algumas perguntas para avaliarmos seu perfil
+            </p>
+          </div>
         </div>
       </div>
     </section>

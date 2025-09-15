@@ -32,7 +32,7 @@ export const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-card/80 border border-primary/30 rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
             <Crown className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium">Clube Exclusivo de Afiliados</span>
+            <span className="text-sm font-medium">ELITE NETWORK CLUB</span>
           </div>
 
           {/* Main Title */}
@@ -46,19 +46,19 @@ export const Hero = () => {
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
             Acesso exclusivo aos melhores <strong className="text-primary">encapsulados</strong> e 
-            <strong className="text-primary"> infoprodutos</strong> do Brasil e mundo. 
+            <strong className="text-primary"> infoprodutos</strong> do Brasil e Mundo. 
             Transforme sua vida financeira conosco.
           </p>
 
           {/* Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="card-premium text-center">
-              <h3 className="text-3xl font-bold text-primary mb-2">500+</h3>
-              <p className="text-muted-foreground">Produtos Premium</p>
+              <h3 className="text-3xl font-bold text-primary mb-2">2.80%+</h3>
+              <p className="text-muted-foreground">Retorno de Investimento</p>
             </div>
             <div className="card-premium text-center">
-              <h3 className="text-3xl font-bold text-primary mb-2">10k+</h3>
-              <p className="text-muted-foreground">Membros Ativos</p>
+              <h3 className="text-3xl font-bold text-primary mb-2">R$ 297</h3>
+              <p className="text-muted-foreground">Média por venda</p>
             </div>
             <div className="card-premium text-center">
               <h3 className="text-3xl font-bold text-primary mb-2">R$ 1M+</h3>
@@ -73,14 +73,14 @@ export const Hero = () => {
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button variant="outline" size="lg" className="btn-secondary">
-              Ver Produtos
+              Chamar WhatsApp
             </Button>
           </div>
 
           {/* Trust Indicators */}
           <div className="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <span className="text-sm">✓ Pagamento Seguro</span>
-            <span className="text-sm">✓ Suporte 24/7</span>
+            <span className="text-sm">✓ Estratégias ocultas</span>
+            <span className="text-sm">✓ Funil high converting</span>
             <span className="text-sm">✓ Garantia de Resultados</span>
           </div>
         </div>

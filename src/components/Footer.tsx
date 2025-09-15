@@ -56,7 +56,7 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 Digital Boss Club. Todos os direitos reservados.</p>
+          <p>© 2025 Digital Boss Club. Todos os direitos reservados.</p>
           <p className="mt-2">Transformando afiliados em verdadeiros bosses digitais.</p>
         </div>
       </div>

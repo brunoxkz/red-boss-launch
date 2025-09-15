@@ -12,13 +12,13 @@ export const Products = () => {
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
             <Star className="w-4 h-4 mr-2" />
-            Produtos Premium
+            (Apenas para membros)
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Nossos <span className="text-gradient-primary">Produtos</span> Exclusivos
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Tenha acesso aos melhores encapsulados e infoprodutos com as maiores comissões do mercado.
+            Tenha acesso aos encapsulados e infoprodutos com as maiores comissões e conversões do mercado Brasileiro e Global.
           </p>
         </div>
 
@@ -53,15 +53,15 @@ export const Products = () => {
               <div className="space-y-2 mb-6">
                 <div className="flex items-center gap-2 text-sm">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Produtos com registro na ANVISA</span>
+                  <span>Conversão extrema e fácil de vender</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Laboratórios certificados</span>
+                  <span>Cash on delivery</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Entrega em todo Brasil</span>
+                  <span>Entregas Brasil ou Mundo</span>
                 </div>
               </div>
               
@@ -82,7 +82,7 @@ export const Products = () => {
               />
               <div className="absolute top-4 right-4">
                 <Badge className="bg-primary text-primary-foreground">
-                  Até 80% Comissão
+                  Até 70% Comissão
                 </Badge>
               </div>
             </div>
@@ -105,7 +105,7 @@ export const Products = () => {
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Materiais de divulgação inclusos</span>
+                  <span>Ganhos de recorrências inclusos</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -128,7 +128,7 @@ export const Products = () => {
               Pronto para Começar a <span className="text-gradient-primary">Lucrar?</span>
             </h3>
             <p className="text-muted-foreground mb-6">
-              Junte-se aos milhares de afiliados que já faturam alto conosco.
+              Junte-se ao seleto grupo de afiliados de elite. Responda algumas perguntas para solicitar seu acesso.
             </p>
             <Button className="btn-hero">
               Quero Ser um Digital Boss
