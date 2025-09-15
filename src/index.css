@@ -2,41 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
+/* Digital Boss Club Design System */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark theme base colors */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand colors - Red power theme */
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 0 84% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 84% 60%;
 
-    --radius: 0.5rem;
+    /* Premium gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 50%, hsl(0 20% 15%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 12%), hsl(0 0% 8%));
+    
+    /* Shadows and glows */
+    --shadow-glow: 0 0 40px hsl(0 84% 60% / 0.3);
+    --shadow-premium: 0 25px 50px -12px hsl(0 0% 0% / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +114,73 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-[var(--shadow-glow)] hover:scale-105 border border-primary/20;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary border border-border text-secondary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-muted hover:border-primary/30;
+  }
+
+  /* Card Variants */
+  .card-premium {
+    @apply bg-gradient-to-br from-card to-background border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-[var(--shadow-premium)] hover:scale-[1.02];
+  }
+
+  .card-product {
+    @apply bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/30 hover:shadow-lg;
+  }
+
+  /* Text Gradients */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+  }
+
+  /* Glow Effects */
+  .glow-red {
+    @apply shadow-[0_0_30px_hsl(0_84%_60%_/_0.3)];
+  }
+
+  /* Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite alternate;
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-card-gradient {
+    background: var(--gradient-card);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glowPulse {
+  from {
+    filter: drop-shadow(0 0 20px hsl(0 84% 60% / 0.4));
+  }
+  to {
+    filter: drop-shadow(0 0 40px hsl(0 84% 60% / 0.8));
   }
 }
