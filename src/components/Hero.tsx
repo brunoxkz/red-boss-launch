@@ -16,13 +16,13 @@ export const Hero = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 animate-float">
+      <div className="absolute top-20 left-10 animate-float hidden md:block">
         <Crown className="w-8 h-8 text-primary glow-red" />
       </div>
-      <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '2s' }}>
+      <div className="absolute top-40 right-20 animate-float hidden md:block" style={{ animationDelay: '2s' }}>
         <Trophy className="w-10 h-10 text-primary glow-red" />
       </div>
-      <div className="absolute bottom-32 left-20 animate-float" style={{ animationDelay: '4s' }}>
+      <div className="absolute bottom-32 left-20 animate-float hidden md:block" style={{ animationDelay: '4s' }}>
         <Zap className="w-6 h-6 text-primary glow-red" />
       </div>
 
@@ -37,9 +37,11 @@ export const Hero = () => {
 
           {/* Main Title */}
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-            SEJA UM
             <span className="block text-gradient-primary animate-glow-pulse">
-              DIGITAL BOSS
+              ELITE AFFILIATE
+            </span>
+            <span className="block text-gradient-primary animate-glow-pulse">
+              NETWORK
             </span>
           </h1>
 
